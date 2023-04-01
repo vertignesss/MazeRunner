@@ -1,0 +1,11 @@
+player_size = 16
+wall_size = player_size * 1.5
+width = 1080
+height = 720
+maze_height = 30
+maze_width = 45
+orbHPboost = 10
+difficultyMultiplier = 1.0
+baseAdditionalOrbs = 10
+baseButtons = 50
+blocksPerSecond = 4

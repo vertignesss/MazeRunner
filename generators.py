@@ -3,6 +3,7 @@ import random
 wall = 'w'
 clear = 'c'
 unvisited = 'u'
+goal = 'g'
 def init_maze(width, height):
     maze = []
     for i in range(0, width):
@@ -31,8 +32,6 @@ def RandomisedPrim(width, height, starting_width, starting_height):
         walls_in_processing.remove(to_change)
         if to_change[0] == 0 or to_change[0] == height - 1 or to_change[1] == 0 or to_change[1] == width - 1:
             continue
-        #print(len(walls_in_processing))
-        print(to_change, height, width)
         horizontal_clears = (maze[to_change[0]][to_change[1] - 1] == 'c') + (maze[to_change[0]][to_change[1] + 1] == 'c')
         vertical_clears = (maze[to_change[0] - 1][to_change[1]] == 'c') + (maze[to_change[0] + 1][to_change[1]] == 'c')
 
