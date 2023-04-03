@@ -4,6 +4,9 @@ wall = 'w'
 clear = 'c'
 unvisited = 'u'
 goal = 'g'
+orb = 'o'
+spikedButton = 's'
+button = 'b'
 def init_maze(width, height):
     maze = []
     for i in range(0, width):

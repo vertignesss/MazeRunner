@@ -11,7 +11,7 @@ class WallBlock(object):
 
 class Button(object):
     def __init__(self, x, y):
-        self.color = (191, 127, 127)
+        self.color = (200, 200, 200)
         self.pressed = False
         self.rect = pygame.rect.Rect(x * constants.wall_size + constants.wall_size / 4, y * constants.wall_size + constants.wall_size / 4, utility.wall_size / 2,
                                      constants.wall_size / 2)
@@ -28,9 +28,9 @@ class Button(object):
 
 class SpikedButton(Button):
     def __init__(self, x, y):
-        self.color = (191, 127, 127)
+        self.color = (191, 191, 191)
         self.pressed = False
-        self.rect = pygame.rect.Rect(x * constants.wall_size + constants.wall_size / 4, y * constants.wall_size + constants.wall_size / 4, utility.wall_size / 2,
+        self.rect = pygame.rect.Rect(x * constants.wall_size + constants.wall_size / 4, y * constants.wall_size + constants.wall_size / 4, constants.wall_size / 2,
                                      constants.wall_size / 2)
         self.ticksTillUnspike = 0
 
@@ -55,7 +55,7 @@ class Orb(object):
         self.color = (0, 0, 255)
 
     def draw(self, camera, screen):
-        constants.draw(self, camera, screen)
+        utility.draw(self, camera, screen)
 
 
 class Goal(object):
@@ -67,5 +67,12 @@ class Goal(object):
         utility.draw(self, camera, screen)
 
 
+class __Highlighter(object):
+    def __init__(self, x, y):
+        self.rect = pygame.rect.Rect(
+            (x * constants.wall_size, y * constants.wall_size, constants.wall_size, constants.wall_size))
+        self.color = (0, 255, 255)
 
+    def draw(self, camera, screen):
+        utility.draw(self, camera, screen)
 
