@@ -282,7 +282,6 @@ while True:
     clock.tick(120)
     utility.quitChecker()
     pygame.display.update()
-    print(player.rect.top, player.rect.left)
     if utility.contains(goal.rect, player.rect):
         utility.quitChecker()
         gameInit(1, 1)
